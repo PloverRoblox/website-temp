@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/invite', (req, res) => {
-    res.redirect('https://discord.com/invite/Zjn7rTp')
+    res.sendFile(`${__dirname}/invite.html`)
 })
 
 // Port listener
