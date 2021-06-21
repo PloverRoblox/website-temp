@@ -23,6 +23,17 @@ app.get('/order', (req, res) => {
     res.sendFile(`${__dirname}/order.html`)
 })
 
+app.get('/buyer-guidelines', (req, res) => {
+  res.sendFile(`${__dirname}/buyer-guidelines.html`)
+})
+
+app.get('/community-guidelines', (req, res) => {
+  res.sendFile(`${__dirname}/community-guidelines.html`)
+})
+
+app.get('/moderation-guidelines', (req, res) => {
+  res.sendFile(`${__dirname}/moderation-guidelines.html`)
+})
 
 // POST Requests
 app.post('/order', (req, res) => {
