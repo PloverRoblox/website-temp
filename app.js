@@ -2,6 +2,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const https = require('https')
 const axios = require('axios')
+require('dotenv').config()
+
+const webhookURL = process.env.DISCORD_WEBHOOK_URL
 
 const app = express()
 
@@ -66,11 +69,10 @@ app.post('/order', (req, res) => {
       
       var config = {
         method: 'post',
-        url: 'https://canary.discord.com/api/webhooks/856039989016395787/nOmc25jBT8-M6-qBtLtS9CD6htcY0g6g88gisEYHLlrGwD8mgDmoSgnXzfHtqTvaK3WR',
+        url: `${webhookURL}`,
         headers: { 
           'Accept': 'application/json', 
-          'Content-Type': 'application/json', 
-          'Cookie': '__cfruid=d244e28d44208557457fffa2566ea28e801cf155-1624168598; __dcfduid=be612a121b464a58a9dbfb6f5f7b7bd4'
+          'Content-Type': 'application/json'
         },
         data : data
       };
