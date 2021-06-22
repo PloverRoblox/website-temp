@@ -15,27 +15,27 @@ app.use(express.static('public'))
 // GET Requests
 
 app.get('/', (req, res) => {
-    res.sendFile(`${__dirname}/index.html`)
+    res.sendFile(`${__dirname}/pages/index.html`)
 })
 
 app.get('/invite', (req, res) => {
-    res.sendFile(`${__dirname}/invite.html`)
+    res.sendFile(`${__dirname}/pages/invite.html`)
 })
 
 app.get('/order', (req, res) => {
-    res.sendFile(`${__dirname}/order.html`)
+    res.sendFile(`${__dirname}/pages/order.html`)
 })
 
 app.get('/buyer-guidelines', (req, res) => {
-  res.sendFile(`${__dirname}/buyer-guidelines.html`)
+  res.sendFile(`${__dirname}/pages/buyer-guidelines.html`)
 })
 
 app.get('/community-guidelines', (req, res) => {
-  res.sendFile(`${__dirname}/community-guidelines.html`)
+  res.sendFile(`${__dirname}/pages/community-guidelines.html`)
 })
 
 app.get('/moderation-guidelines', (req, res) => {
-  res.sendFile(`${__dirname}/moderation-guidelines.html`)
+  res.sendFile(`${__dirname}/pages/moderation-guidelines.html`)
 })
 
 // POST Requests
